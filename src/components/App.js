@@ -5,10 +5,10 @@ import EditorCanvas from './EditorCanvas';
 import './App.css';
 
 const DEFAULT_ZOOMS = {
-  'presentation': 1.0,
-  'instagram-post': 0.9,
-  'reel-linkedin': 0.6,
-  'a4': 0.3
+  'presentation': 0.45,
+  'instagram-post': 0.35,
+  'reel-linkedin': 0.25,
+  'a4': 0.13
 };
 
 const CANVAS_SIZES = {
@@ -37,12 +37,14 @@ function App() {
   // Update zoom and canvas size when zoom or baseSize changes
   useEffect(() => {
     if (!canvas) return;
-    const width = Number(baseSize.width);
-    const height = Number(baseSize.height);
-    const z = Number(zoom);
-    if (
-      !width || !height || !z || isNaN(width) || isNaN(height) || isNaN(z) || width <= 0 || height <= 0 || z <= 0
-    ) {
+    let width = Number(baseSize.width);
+    let height = Number(baseSize.height);
+    let z = Number(zoom);
+    // Clamp values to safe minimums
+    if (isNaN(width) || width < 10) width = 10;
+    if (isNaN(height) || height < 10) height = 10;
+    if (isNaN(z) || z < 0.1) z = 0.1;
+    if (!width || !height || !z) {
       console.warn('Invalid canvas size or zoom:', { width, height, zoom });
       return;
     }
