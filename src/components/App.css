@@ -2,6 +2,7 @@
   display: flex;
   flex-flow: column;
   height: 100vh;
+  position: relative;
 }
 
 .editor .toolbox {
@@ -12,9 +13,43 @@
 }
 
 .editor .canvasbox {
-  overflow: auto;
   flex: 1;
   background-color: #777;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.editor .canvasbox canvas {
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.zoom-slider-container {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.95);
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 10;
+}
+
+.zoom-slider {
+  width: 200px;
+  margin-right: 1em;
+}
+
+.zoom-label {
+  font-size: 1em;
+  color: #333;
+  min-width: 40px;
+  text-align: right;
 }
 
 .toolbox button {

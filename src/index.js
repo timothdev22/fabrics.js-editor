@@ -4,12 +4,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { 
   faImage, 
   faFont, 
-  faPencil, 
-  faFilter, 
   faUpRightAndDownLeftFromCenter,
   faTrash, 
-  faDownload,
-  faCode 
+  faDownload
 } from '@fortawesome/free-solid-svg-icons';
 
 import './index.css';
@@ -19,13 +16,11 @@ import reportWebVitals from './reportWebVitals';
 library.add(
   faImage, 
   faFont, 
-  faPencil, 
-  faFilter, 
   faUpRightAndDownLeftFromCenter, 
   faTrash, 
-  faDownload, 
-  faCode
+  faDownload
 );
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

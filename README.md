@@ -1,5 +1,5 @@
-# PhotoZri
-[PhotoZri](https://codezri.org/photozri), A simple image editor app created with Fabric.js v6 and React.
+# ephoreal
+[ephoreal](https://codezri.org/ephoreal), A simple image editor app created with Fabric.js v6 and React.
 
 ![](./media/preview.png)
 
@@ -25,7 +25,7 @@ yarn start
 
 ## Credits
 - This project is a fork of the [codezri/fabric-image-editor](https://github.com/codezri/fabric-image-editor) repository.
-- The logo of the PhotoZri app is designed by 
+- The logo of the ephoreal app is designed by 
 [Andrean Prabowo](https://www.flaticon.com/authors/andrean-prabowo) and is download from
 [Flaticons](https://www.flaticon.com/free-icon/gallery_6212173?term=photos&page=3&position=9&origin=search&related_id=6212173). 
 Design credits go to the original icon author, Andrean Prabowo.
